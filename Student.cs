@@ -4,23 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CollectionsDemo
+namespace ClassLibrary1
 {
-    public class Student:IComparable<Student>
+    public class Student
     {
-
+        public int Studid { get; set; }
+        public string Name{ get; set; }
         public int Age { get; set; }
-        public string   Name { get; set; }
-        public int Rollno { get; set; }
 
-        public int CompareTo(Student other)
-        {
-            if (this.Rollno > other.Rollno) 
-            {
-                return 1;
-                    }
-            else if(this.Rollno < other.Rollno) { return -1; }
-            else { return 0; }
-        }
+        public int StudStd { get; set; }
     }
 }
