@@ -15,6 +15,21 @@ namespace LinqDemo
             //2 ways
             //Query Syntax
             //Method Syntax
+            
+            //var evenNos = arr.Where(a => a % 2 == 0).OrderBy(i=>i);
+            //arr[9] = 100;
+            //foreach (int i in evenNos)
+            //{
+            //    Console.WriteLine(i);
+
+            //}
+            //var nos = arr.Select(i => i).OrderBy(i=>i);
+            //foreach (int i in nos)
+            //{
+            //    Console.WriteLine(i);
+            
+            //}
+
 
             //var evenNos = from a in arr
             //              where a % 2 == 0
@@ -37,7 +52,7 @@ namespace LinqDemo
             //"Bye",
             //"GoodMorning",
             //"GoodDay"
-                      
+
             //};
 
             //var result = from s in stringList
@@ -53,10 +68,21 @@ namespace LinqDemo
             new Student{Studid=11,Name="Asha",Age=12,StudStd=10 },
             new Student {Studid=3,Name="Priya",Age=20,StudStd=9  },
             new Student {Studid=2,Name="Kajal",Age=12,StudStd=9  },
-            new Student {Studid=4,Name="Nisha",Age=12 ,StudStd=10 },
-            new Student{Studid=1,Name="Usha",Age=12,StudStd=10  }
+            new Student {Studid=4,Name="Nisha",Age=12 ,StudStd=9 },
+            new Student{Studid=1,Name="Usha",Age=12,StudStd=9  }
             
             };
+
+            //var data = students.Where(s => s.Age == 12 && s.StudStd == 9);
+
+            //Console.WriteLine($"{data.Studid} \t {data.Name} \t {data.Age}");
+            //foreach (var item in data)
+            //{
+            //    Console.WriteLine($"{item.Studid} \t {item.Name} \t {item.Age}");
+            //}
+
+
+
             //var data = from s in students
             //           select s;
 
@@ -79,21 +105,35 @@ namespace LinqDemo
             //}
 
 
-            var data = from s in students
-                       group s by s.StudStd into StdData
-                       select StdData;
+            //var data = from s in students
+            //           group s by s.StudStd into StdData
+            //           select StdData;
 
-            foreach (var item in data)
+            //foreach (var item in data)
+            //{
+            //    Console.WriteLine("standard " + item.Key);
+            //    foreach (var studData in item)
+            //    {
+
+            //        Console.WriteLine($"{studData.Studid} \t {studData.Name} \t {studData.Age}");
+            //    }
+            //}      
+
+            var data = students.GroupBy(s => s.StudStd);
+            foreach ( var item in data )
             {
-                Console.WriteLine("standard " + item.Key);
+                Console.WriteLine($"Group by this : { item.Key}   Standard");
+                Console.WriteLine($"No of students : {item.Count()}");
                 foreach (var studData in item)
                 {
-
                     Console.WriteLine($"{studData.Studid} \t {studData.Name} \t {studData.Age}");
                 }
-            }      
 
-            
+            }
+
+
+
+
 
 
 
