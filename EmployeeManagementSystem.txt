@@ -1,0 +1,31 @@
+Employee Management System
+
+ Employee API Controller: 
+The Employee API Controller Allow you to: 
+1. Show All the employees working on the Company. 
+2. Add new Employee into the application. 
+3. Edit existing Employee Details 
+4. Delete Existing Employee details. 
+
+
+Employee Working Hour management API Controller: 
+The Working Hour Controller Allow you to: 
+1. Show all the Working Hour details like the company monthly Working Hour and Employee monthly Working Hour. 
+2. Add new Working Hour into the application.
+3. Edit existing Working Hours Details. 
+4. Delete Existing Working Hour details, if required. 
+
+
+Employee Designation API Controller: 
+The Employee Designation Controller Allow you to: 
+1. Show All the Employee designation available in the Company. 
+2. Add new Employee designation into the application. 
+3. Edit exiting Employee designation Details 
+4. Delete Existing Employee designation details. 
+
+Employee Payment Rules Management API Controller: 
+The Payment Rules Controller Allow you to: 
+1. Show All the Payment Rules available in the Company. 
+2. Add new Payment Rules into the application. 
+3. Edit exiting Payment Rules Details 
+4. Delete Existing Payment Rules details, if required
